@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--						<div class="pull-right" style="margin-right:40px">-->
+<!--							<a href="#striped-table" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class="fa fa-code"></i> Source Code</a>-->
+<!--						</div>-->
+<!--					</div>-->
+<h3 style="margin-left:300px;margin-top:30px">Doctors List</h3>
+					<table class="table table-striped" style="margin-left:300px;margin-top:70px">
+						<thead>
+							<tr>
+								<th scope="col">Id</th>
+								<th scope="col">Name</th>
+								<th scope="col">Qualification</th>
+								<th scope="col">Email</th>
+								<th scope="col">Interest</th>
+								<th scope="col">Phone</th>
+								<th scope="col">Hospital</th>
+								<th scope="col">Place</th>
+								<th scope="col">District</th>
+								<th scope="col">Image</th>
+								<th>Options</th>
+								<th>scope</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for i in data %}
+							<tr>
+								<td>{{i.id}}</td>
+								<td>{{i.Name}}</td>
+								<td>{{i.Qualification}}</td>
+								<td>{{i.Email}}</td>
+								<td>{{i.Interest}}</td>
+								<td>{{i.Phone}}</td>
+								<td>{{i.Hospital}}</td>
+								<td>{{i.Place}}</td>
+								<td>{{i.District}}</td>
+								 <td>
+									 <img src="{{i.Image.url}}">
+                             </td>
+								<td>
+									<a href="{% url 'edit_doctor' doc_id=i.id %}">
+										<button class="btn-outline-primary" style="width:70px;height:35px">Edit</button>
+									</a>
+									<a href="{% url 'delete_doctor' doc_id=i.id %}">
+										<button class="btn-outline-danger" style="width:70px;height:35px;margin-left:78px;margin-top:-50px">Delete</button>
+									</a>
+								</td>
+
+<!--								<td><span class="badge badge-primary">Primary</span></td>-->
+						{% endfor %}
+						</tbody>
+					</table>
+					<div class="collapse collapse-box" id="striped-table">
+						<div class="code-box">
+							<div class="clearfix">
+								<a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left" data-clipboard-target="#striped-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
+								<a href="#striped-table" class="btn btn-primary btn-sm pull-right" rel="content-y" data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>
+							</div>
+							<pre><code class="xml copy-pre hljs" id="striped-table-code">
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-striped"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"row"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+							</code></pre>
+						</div>
+					</div>
+				</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {% if messages %}
+        {% for i in messages %}
+
+            {% if i.tags == 'warning' %}
+        <script>
+            swal('{{i}}', '', 'warning');
+        </script>
+
+        {% elif i.tags == 'error' %}
+        <script>
+            swal('{{i}}','','error');
+        </script>
+
+        {% elif i.tags == 'info' %}
+        <script>
+            swal('{{i}}','','info');
+        </script>
+
+         {% else %}
+        <script>
+            swal('{{i}}','','success');
+        </script>
+        {% endif %}
+        {% endfor %}
+{% endif %}
+</body>
+</html>
+{% endblock %}

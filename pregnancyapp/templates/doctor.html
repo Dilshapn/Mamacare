@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'homestyle/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/style.css' %}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+<!--    <div class="offcanvas-menu-overlay"></div>-->
+<!--    <div class="offcanvas-menu-wrapper">-->
+<!--        <div class="offcanvas__option">-->
+<!--            <div class="offcanvas__links">-->
+<!--                <a href="#">Sign in</a>-->
+<!--                <a href="#">FAQs</a>-->
+<!--            </div>-->
+<!--            <div class="offcanvas__top__hover">-->
+<!--                <span>Usd <i class="arrow_carrot-down"></i></span>-->
+<!--                <ul>-->
+<!--                    <li>USD</li>-->
+<!--                    <li>EUR</li>-->
+<!--                    <li>USD</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="offcanvas__nav__option">-->
+<!--            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>-->
+<!--            <a href="#"><img src="img/icon/heart.png" alt=""></a>-->
+<!--            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>-->
+<!--            <div class="price">$0.00</div>-->
+<!--        </div>-->
+<!--        <div id="mobile-menu-wrap"></div>-->
+<!--        <div class="offcanvas__text">-->
+<!--&lt;!&ndash;            <p>Free shipping, 30-day return or refund guarantee.</p>&ndash;&gt;-->
+<!--        </div>-->
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+   <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+<!--                            <p>Free shipping, 30-day return or refund guarantee.</p>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header__top__links">
+                                {% if request.session.Username %}
+                                <a href="#">Welcome {{request.session.Username}} / Logout</a>
+                                {% else %}
+<!--                                <a href="#">Sign in</a>-->
+                                {% endif %}
+                            </div>
+<!--                            <div class="header__top__hover">-->
+<!--                                <span>Usd <i class="arrow_carrot-down"></i></span>-->
+<!--                                <ul>-->
+<!--                                    <li>USD</li>-->
+<!--                                    <li>EUR</li>-->
+<!--                                    <li>USD</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="#" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-11">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="{% url 'doctor_page' %}">Book Now</a></li>
+                            <li><a href="#">Categories</a>
+                                <ul class="dropdown">
+                                    {% for i in data %}
+                                    <li><a href="{% url 'single_product' cat_name=i.category %}">{{i.category}}</a></li>
+                                    {% endfor %}
+                                      </ul>
+
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+<!--                        <a href="#" class="search-switch"><img src="{% static 'homestyle/img/icon/search.png' %}" alt=""></a>-->
+                        <a href="http://127.0.0.1:8000/adminapp/admin_login/"><img src="{% static 'homestyle/img/icon/heart.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'homestyle/img/icon/cart.png' %}" alt=""> <span>0</span></a>
+                        <div class="price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+<!--    <section class="breadcrumb-blog set-bg" data-setbg="img/breadcrumb-bg.jpg">-->
+<!--&lt;!&ndash;        <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-lg-12">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h2>Our Blog</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </section>-->
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Section Begin -->
+    <div class="container mt-5 mb-5">
+
+    <div class="d-flex justify-content-between mb-3">
+
+<!--        <span>Doctors</span>-->
+        <button class="btn btn-primary add">Doctor List</button>
+
+    </div>
+    <div class="row g-2">
+ {% for i in doc %}
+        <div class="col-md-3" style="margin-bottom:8px">
+
+
+            <div class="card p-2 py-3 text-center" style="margin-bottom:8px">
+
+
+                <div class="img mb-2" style="margin-bottom:8px;height:125px">
+
+                    <img src="{{i.Image.url}}" width="120" height="125" class="rounded-circle">
+
+                </div>
+
+                <h5 class="mb-0" >{{i.Name}}</h5>
+                <small>{{i.Interest }}</small>
+                 <small>{{i.Place}}</small>
+
+                <div class="ratings mt-2">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                </div>
+
+                <div class="mt-4 apointment">
+
+                   <a href="{% url 'book_appointment' dr_name=i.Name %}">
+                    <button class="btn btn-success text-uppercase">Book Appointment</button>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/o5uMfKo.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Mario Speedway</h5>-->
+<!--                <small>Cardiologist</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/tmdHXOY.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Anna Sthesia</h5>-->
+<!--                <small>Surgeon</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/C4egmYM.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Paul Moliv</h5>-->
+<!--                <small>Dentist</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/0LKZQYM.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Anna Maul</h5>-->
+<!--                <small>Eye Specialist</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/ZSkeqnd.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Gail Forcewind</h5>-->
+<!--                <small>Urology</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+<!--        <div class="col-md-3">-->
+
+<!--            <div class="card p-2 py-3 text-center">-->
+
+<!--                <div class="img mb-2">-->
+
+<!--                    <img src="https://i.imgur.com/MZm1LNz.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Patey Cruiser</h5>-->
+<!--                <small>Neurosurgeon</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card p-2 py-3 text-center">-->
+<!--                <div class="img mb-2">-->
+<!--                    <img src="https://i.imgur.com/HFpxxJz.jpg" width="70" class="rounded-circle">-->
+
+<!--                </div>-->
+
+<!--                <h5 class="mb-0">Patey Cruiser</h5>-->
+<!--                <small>Neurosurgeon</small>-->
+
+<!--                <div class="ratings mt-2">-->
+
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+
+<!--                </div>-->
+
+<!--                <div class="mt-4 apointment">-->
+
+<!--                    <button class="btn btn-success text-uppercase">Book Appointment</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+
+   </div>
+    <style>
+        body {
+    font-family: 'Maven Pro', sans-serif
+}
+
+body{
+  background-color: #eee;
+}
+
+.add{
+
+  border-radius: 20px;
+}
+
+.card{
+
+  border:none;
+  border-radius: 10px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.card:hover{
+
+   -webkit-box-shadow: 3px 5px 17px -4px #777777;
+box-shadow: 3px 5px 17px -4px #777777;
+}
+
+.ratings i {
+
+  color: green;
+}
+
+.apointment button{
+
+  border-radius: 20px;
+  background-color: #eee;
+  color: #000;
+  border-color: #eee;
+  font-size: 13px;
+}
+    </style>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Clothing Store</a></li>
+                            <li><a href="#">Trending Shoes</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>2020
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .card {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.ratings i {
+    color: #ff9800; /* More visible star color */
+}
+
+        </style>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'homestyle/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'homestyle/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/main.js' %}"></script>
+</body>
+
+</html>

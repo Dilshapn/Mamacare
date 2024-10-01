@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--						<div class="pull-right" style="margin-right:40px">-->
+<!--							<a href="#striped-table" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"><i class="fa fa-code"></i> Source Code</a>-->
+<!--						</div>-->
+<!--					</div>-->
+<h3 style="margin-left:300px;margin-top:30px">Category List</h3>
+					<table class="table table-striped" style="margin-left:300px;margin-top:70px">
+						<thead>
+							<tr>
+								<th scope="col">Id</th>
+								<th scope="col">Category</th>
+								<th scope="col">Item</th>
+                                <th scope="col">Price</th>
+								<th scope="col">Image</th>
+									<th scope="col">Image2</th>
+									<th scope="col">Image3</th>
+								<th>Options</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for i in product %}
+							<tr>
+								<td>{{i.id}}</td>
+								<td>{{i.category}}</td>
+								<td>{{i.item}}</td>
+								<td>{{i.price}}</td>
+								 <td>
+									 <img src="{{i.image1.url}}" style="width:250px;height:250px">
+
+                             </td>
+								 <td>
+									 <img src="{{i.image2.url}}" style="width:250px;height:250px">
+
+                             </td>
+								 <td>
+									 <img src="{{i.image3.url}}" style="width:250px;height:250px">
+
+                             </td>
+								   <td>
+                              <a href="{% url 'edit_category' edit_id=i.id %}">
+                                         <button class="btn btn-outline-primary">Edit</button>
+                                     </a>
+                                       <a href="{% url 'del_category' edit_id=i.id %}">
+                                           <button class="btn btn-outline-danger">Delete</button>
+                                       </a>
+                             </td>
+							</tr>
+								{% endfor %}
+
+
+
+						</tbody>
+					</table>
+					<div class="collapse collapse-box" id="striped-table">
+						<div class="code-box">
+							<div class="clearfix">
+								<a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left" data-clipboard-target="#striped-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
+								<a href="#striped-table" class="btn btn-primary btn-sm pull-right" rel="content-y" data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>
+							</div>
+							<pre><code class="xml copy-pre hljs" id="striped-table-code">
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-striped"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"row"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+							</code></pre>
+						</div>
+					</div>
+				</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {% if messages %}
+        {% for i in messages %}
+
+            {% if i.tags == 'warning' %}
+        <script>
+            swal('{{i}}', '', 'warning');
+        </script>
+
+        {% elif i.tags == 'error' %}
+        <script>
+            swal('{{i}}','','error');
+        </script>
+
+        {% elif i.tags == 'info' %}
+        <script>
+            swal('{{i}}','','info');
+        </script>
+
+         {% else %}
+        <script>
+            swal('{{i}}','','success');
+        </script>
+        {% endif %}
+        {% endfor %}
+{% endif %}
+</body>
+</html>
+{% endblock %}

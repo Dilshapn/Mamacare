@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'homestyle/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'homestyle/css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="{% static 'homestyle/img/icon/search.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'homestyle/img/icon/heart.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'homestyle/img/icon/cart.png' %}" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header__top__links">
+                                <a href="#">Sign in</a>
+                                <a href="#">FAQs</a>
+                            </div>
+                            <div class="header__top__hover">
+                                <span>Usd <i class="arrow_carrot-down"></i></span>
+                                <ul>
+                                    <li>USD</li>
+                                    <li>EUR</li>
+                                    <li>USD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="{% static 'homestyle/img/logo.png' %}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="active"><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="{% static 'homestyle/img/icon/search.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'homestyle/img/icon/heart.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'homestyle/img/icon/cart.png' %}" alt=""> <span>0</span></a>
+                        <div class="price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-hero spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="blog__hero__text">
+                        <h3><b>"Countdown to Your Little Miracle: Use Our Due Date Calculator to Know When to Expect Your Bundle of Joy!"</b></h3>
+<!--                        <ul>-->
+<!--                            <li>By Deercreative</li>-->
+<!--                            <li>February 21, 2019</li>-->
+<!--                            <li>8 Comments</li>-->
+<!--                        </ul>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                    <div class="blog__details__pic">
+                        <img src="{% static 'homestyle/img/calc.jpg' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__share">
+                    <style>
+
+        .calculator {
+            max-width: 700px;
+            padding: 20px;
+            border: 2px solid #ff6f61; /* Pink border */
+            border-radius: 8px;
+            background-color: #ffffff; /* White background for the box */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+        }
+        h6 {
+            color: #ff6f61; /* Pink text color */
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ff6f61; /* Pink border for input */
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61; /* Pink button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e65c50; /* Darker pink on hover */
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('your-image-path.jpg'); /* Replace with your side image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Full height for side image */
+            border-radius: 0 8px 8px 0; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-left:180px">
+    <div class="calculator">
+    <h6>Pregnancy Due Date Calculator</h6>
+    <label for="last-period">First Day of Last Menstrual Period (LMP):</label>
+    <input type="date" id="last-period" required>
+
+    <label for="cycle-length">Cycle Length (in days):</label>
+    <input type="number" id="cycle-length" required placeholder="Enter your cycle length" min="21" max="35">
+
+    <button onclick="calculateDueDate()">Calculate Due Date</button>
+    <div class="result" id="due-date"></div>
+</div>
+<div class="image-container"></div>
+
+    <div class="image-container"></div>
+</div>
+<script>
+function calculateDueDate() {
+    const lastPeriodDate = document.getElementById('last-period').value;
+    const cycleLength = parseInt(document.getElementById('cycle-length').value);
+
+    if (!lastPeriodDate || isNaN(cycleLength)) {
+        alert('Please select a valid date and enter a cycle length.');
+        return;
+    }
+
+    const lmpDate = new Date(lastPeriodDate);
+
+    // Adjust the due date based on the cycle length
+    const dueDate = new Date(lmpDate);
+
+    // Adding 280 days (40 weeks) plus the cycle length if needed
+    dueDate.setDate(dueDate.getDate() + 280 + (cycleLength - 28));
+
+    // Format the due date to a readable format
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDueDate = dueDate.toLocaleDateString('en-US', options);
+
+    document.getElementById('due-date').innerHTML = `Your Estimated Due Date is: <br><strong>${formattedDueDate}</strong>`;
+}
+</script>
+
+
+                        </div>
+                    </div><br><br>
+                        <div class="blog__details__text" style="margin-top:400px">
+
+                            <h3>
+                                How to Calculate Your Due Date
+                            </h3><br>
+                          <h6>   </h6>
+                             <a class="nav-link" style="color:black" href="#due">What is an estimated due date during pregnancy?</a>
+                        <a class="nav-link" style="color:black" href="#last-period">First Day of Last Period</a>
+                            <a class="nav-link" style="color:black" href="#conception-date">Conception Date</a>
+                        <a class="nav-link" style="color:black" href="#ivf-transfer">IVF Transfer Date</a>
+                        <a class="nav-link" style="color:black" href="#ultrasound-scan">Ultrasound Scan</a>
+                        <a class="nav-link" style="color:black"  href="#plan-due-date">Can I Plan My Due Date?</a>
+                        <a class="nav-link" style="color:black" href="#change-due-date">Can My Due Date Change?</a>
+
+              </div>
+
+                             <div id="due" class="section">
+    <h4>What is an estimated due date during pregnancy?</h4>
+    <p><h5>Your due date (also known as your estimated due date) is a calculation of when you're expected to give birth. Your EDD is important for you to know as you prepare to welcome your baby.
+
+But remember, it's only an estimated due date, not a deadline for your baby to arrive. Just 4 percent of babies are born on their EDD.
+
+                                 Our pregnancy Due Date Calculator (or estimated Due Date Calculator) can help. Here’s how to calculate your due date Opens a new windowusing your last period, conception date, IVF transfer date, or timing of your last ultrasound.</h5></p>
+</div>
+                       <div id="due1" class="section">
+    <h4>First day of last period</h4>
+    <p><h5>Most pregnancies last around 40 weeks (or 38 weeks from conception), so typically the best way to estimate your due date is to count 40 weeks, or 280 days, from the first day of your last menstrual period (LMP). You can also subtract three months from the first day of your last period and add seven days. Or choose "last period" from the choices in our Due Date Calculator menu, above.
+
+The first day of your LMP is how most health care providers estimate a baby's due date. </h5></p>
+</div>
+                       <div id="due3" class="section">
+    <h4>Conception date</h4>
+    <p><h5>If you've been tracking ovulation symptoms or have been using ovulation test strips, you may be able to use your conception date to see how far along you are and when baby is likely to arrive.
+
+Just add 266 days to get your estimated due date. Or select "conception date" and let our pregnancy Due Date Calculator do the math for you.
+
+Wondering when your baby was conceived? Use the Conception Date Calculator Opens a new windowto find out the most likely date..</h5></p>
+</div>
+                       <div id="due4" class="section">
+    <h4>IVF transfer date</h4>
+    <p><h5>If you conceived through in vitro fertilization (IVF), you can calculate your due date using your IVF transfer date. Most embryo transfers occur either three days or five days after egg retrieval and fertilization.
+
+If you had a day-three transfer, count 263 days from the transfer date to calculate your due date, and if you had a day-five transfer, count 261 days. Or use our IVF Due Date Calculator to find out the big day!</h5></p>
+</div>
+                       <div id="due5" class="section">
+    <h4>Ultrasound scan</h4>
+    <p><h5>Even if you can’t pinpoint when you conceived, forget the day of your last menstrual period, or aren’t sure when ovulation occurred, the date of an early ultrasound, if you have one, can help your practitioner determine your due date at your first prenatal appointment or another prenatal visit in your first trimester.
+
+The timing of an early ultrasound can sometimes more accurately date the pregnancy than your LMP and other methods. Just choose "ultrasound" from our Due Date Calculator choices.
+
+Just be aware, however, that not all women get an early ultrasound. Some practitioners perform them routinely, but others only recommend one if your periods are irregular, you're 35 or older, you have a history of miscarriages or pregnancy complications, or the due date can’t be determined based on your physical exam and LMP.
+
+Other clues can help your health care provider figure out how far along you are and better pinpoint your due date at your prenatal check-ups.
+
+Pregnancy milestones such as the first time the baby's heartbeat is detected (around week 9 or 10, though it can vary) and when you first feel fetal movement (on average between 18 and 22 weeks, but it can be earlier or later), can give clues as to whether your due date is accurate.
+
+Your fundal height, which is the measurement from your pubic bone to the top of your uterus, is checked by your practitioner at each prenatal visit and helps confirm your due date.
+
+The size of your uterus, which will be noted when your initial internal pregnancy exam is performed, can also be a factor in pinpointing the EDD.</h5></p>
+</div>
+                       <div id="due6" class="section">
+    <h4>Can I plan my due date?</h4>
+    <p><h5>Whether you're trying to avoid being very pregnant in the middle of summer or are a teacher who wants to maximize time off with your little one, you can try to time when you conceive in order to "plan" your due date.
+
+But even if you're one of the lucky ones who's able to get pregnant when she really wants to, just remember that you probably won't be able to map out exactly when you'll give birth to the day (or even the week or month!).
+
+Still, you can try our Ovulation Calculator, which uses the date of your last menstrual period and your typical cycle length to discover the days you're most likely to be fertile and increase your chances of conceiving.</h5></p>
+</div>
+                       <div id="due7" class="section">
+    <h4>Can my due date change?</h4>
+    <p><h5>Yes, your due date can change. While it’s definitely not a reason to worry, your doctor may change your due date for a number of reasons as your pregnancy progresses.
+
+It may be that you have irregular periods and your early ultrasound dating was off, or that your first ultrasound was in the second trimester.
+
+It could also be because your fundal height is abnormal, or your levels of alpha-fetoprotein (AFP), a protein made by the baby, are outside the usual range. Talk to your practitioner if you have any questions or concerns.</h5></p>
+</div>
+
+
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__author">
+                                        <div class="blog__details__author__pic">
+                                            <img src="{% static 'homestyle/img/blog/details/blog-author.jpg' %}" alt="">
+                                        </div>
+                                        <div class="blog__details__author__text">
+                                            <h5>Aiden Blair</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__tags">
+                                        <a href="#">#Fashion</a>
+                                        <a href="#">#Trending</a>
+                                        <a href="#">#2020</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__btns">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="" class="blog__details__btns__item">
+                                        <p><span class="arrow_left"></span> Previous Pod</p>
+                                        <h5>It S Classified How To Utilize Free Classified Ad Sites</h5>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="" class="blog__details__btns__item blog__details__btns__item--next">
+                                        <p>Next Pod <span class="arrow_right"></span></p>
+                                        <h5>Tips For Choosing The Perfect Gloss For Your Lips</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__comment">
+                            <h4>Leave A Comment</h4>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text" placeholder="Phone">
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <textarea placeholder="Comment"></textarea>
+                                        <button type="submit" class="site-btn">Post Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="{% static 'homestyle/img/footer-logo.png' %}" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="{% static 'homestyle/img/payment.png' %}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Clothing Store</a></li>
+                            <li><a href="#">Trending Shoes</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>2020
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'homestyle/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'homestyle/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'homestyle/js/main.js' %}"></script>
+</body>
+
+</html>
